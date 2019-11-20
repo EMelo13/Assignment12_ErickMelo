@@ -9,6 +9,8 @@ public class GameController : NetworkBehaviour
 
     void Update()
     {
+        transform.position += Vector3.back * Time.deltaTime;
+
         // We only want the server to handle this...
         if (isServer)
         {
@@ -26,5 +28,6 @@ public class GameController : NetworkBehaviour
         GameObject enemy = (GameObject)Instantiate(enemyPrefab, position, Quaternion.identity);
         NetworkServer.Spawn(enemy);
         spawnEnemyTime = Time.fixedTime + Random.Range(3, 8);
+        
     }
 }

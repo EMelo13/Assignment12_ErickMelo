@@ -9,7 +9,7 @@ public class GameController : NetworkBehaviour
 
     void Update()
     {
-       transform.position += Vector3.back * Time.deltaTime;
+      
 
         if (isServer)
         {
@@ -29,5 +29,12 @@ public class GameController : NetworkBehaviour
         spawnEnemyTime = Time.fixedTime + Random.Range(3, 8);
         
     }
+
+
+   // public void Win()
+   // {
+   //   isRunning = false;
+   //     WinUI.enabled = true;
+   //}
 
 }

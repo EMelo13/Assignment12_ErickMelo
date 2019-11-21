@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Mirror;
 public class PlayerHealth: MonoBehaviour {
 
-    private int health;
+    public int health;
     public PlayerHealth(int health)
     {
         this.health = health;

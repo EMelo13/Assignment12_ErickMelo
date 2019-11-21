@@ -9,9 +9,8 @@ public class GameController : NetworkBehaviour
 
     void Update()
     {
-        transform.position += Vector3.back * Time.deltaTime;
+       transform.position += Vector3.back * Time.deltaTime;
 
-        // We only want the server to handle this...
         if (isServer)
         {
             if (Time.fixedTime > spawnEnemyTime)
@@ -30,4 +29,5 @@ public class GameController : NetworkBehaviour
         spawnEnemyTime = Time.fixedTime + Random.Range(3, 8);
         
     }
+
 }

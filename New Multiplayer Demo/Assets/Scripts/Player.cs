@@ -73,5 +73,9 @@ public class Player : NetworkBehaviour
         NetworkServer.Spawn(bullet);
     }
 
-
+    private void Start()
+    {
+        PlayerHealth playerHealth = new PlayerHealth(100);
+        Debug.Log("Health: " + playerHealth.GetHealth());
+    }
 }
